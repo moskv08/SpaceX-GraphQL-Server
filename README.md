@@ -30,7 +30,14 @@ Download the dependencies.
 $ npm install
 ```
 
-Run the application locally on **localhost:5000**.
+Run the application locally on **localhost:5000** initially
 ```
-$ npm start
+$ npm run start
 ```
+
+or with _nodemon_ to keep track on changes
+```
+$ npm run server
+```
+
+and finally go to [http://localhost:5000/graphql](http://localhost:5000/graphql) to use the **GraphiQL** to query your data.
