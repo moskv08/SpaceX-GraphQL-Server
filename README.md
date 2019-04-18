@@ -2,13 +2,11 @@
   
 ### Intro
   
-This solution provides you a graphQL runtime environment to retrieve data from the **SpaceX API** with smart graphQL queries.  
+This solution provides you a graphQL runtime environment to retrieve data from the **SpaceX API** by allowing you to use smart graphQL queries.  
   
-You want to learn more about **graphQL**, visit the website [https://graphql.org](https://graphql.org)
-  
-To get information about the SpaceX **REST API** visit the following [Github Repository](https://github.com/r-spacex/SpaceX-API)
+If you want to learn more about **graphQL** then just visit the official website [https://graphql.org](https://graphql.org). To get more information about the SpaceX **REST API** visit the following [Github Repository](https://github.com/r-spacex/SpaceX-API).
 
-### How was this implemented?
+### How was this GraphQL server implemented?
 
 The backend server application was implemented with **Node.js** and some helpers as follows:  
 
@@ -20,12 +18,13 @@ The backend server application was implemented with **Node.js** and some helpers
 
 ### How to use it?  
   
-Clone the repository.
+Just clone the repository and
 ```
 $ git clone https://github.com/RobbMoskv/SpaceX-GraphQL-Server.git
+$ cd SpaceX-GraphQL-Server
 ```
 
-Download the dependencies.
+download all necessary dependencies via npm (or yarn).
 ```
 $ npm install
 ```
@@ -35,9 +34,12 @@ Run the application locally on **localhost:5000** initially
 $ npm run start
 ```
 
-or with _nodemon_ to keep track on changes
+or with the _nodemon_ mode to keep track of environment changes.
 ```
 $ npm run server
 ```
 
-and finally go to [http://localhost:5000/graphql](http://localhost:5000/graphql) to use the **GraphiQL** to query your data.
+Finally open your browser and go to [http://localhost:5000/graphql](http://localhost:5000/graphql) to use the **GraphiQL** to query your data.
+  
+
+Enjoy!
