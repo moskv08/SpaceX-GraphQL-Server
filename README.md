@@ -2,16 +2,21 @@
   
 ### Intro
   
-This solution provides you graphQL runtime environment to query the **SpaceX API** with smart graphQL queries.  
+This solution provides you a graphQL runtime environment to retrieve data from the **SpaceX API** with smart graphQL queries.  
   
-You want to learn more about **graphQL**, visit the website (https://graphql.org)[https://graphql.org]
+You want to learn more about **graphQL**, visit the website [https://graphql.org](https://graphql.org)
+  
+To get information about the SpaceX **REST API** visit the following [Github Repository](https://github.com/r-spacex/SpaceX-API)
 
-### How was it implemented?
+### How was this implemented?
 
-- Express.js
-- GraphQL
-- Express-GraphQL
-- Axios (for API requests)
+The backend server application was implemented with **Node.js** and some helpers as follows:  
+
+- Express.js Framework 
+- GraphQL Module
+- Express-GraphQL Module
+- Axios Module (for API requests)
+- Nodemon Module (Serve on save)
 
 ### How to use it?  
   
@@ -27,5 +32,5 @@ $ npm install
 
 Run the application locally on **localhost:5000**.
 ```
-$ npm run
+$ npm start
 ```
