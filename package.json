@@ -1,0 +1,25 @@
+{
+  "name": "spacex-graphql-server",
+  "version": "1.0.0",
+  "description": "Node.js graphql server as backend solution.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobbMoskv/SpaceX-GraphQL-Server.git"
+  },
+  "keywords": [
+    "graphql",
+    "javascript",
+    "node",
+    "express"
+  ],
+  "author": "Fabrizio Zihlmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobbMoskv/SpaceX-GraphQL-Server/issues"
+  },
+  "homepage": "https://github.com/RobbMoskv/SpaceX-GraphQL-Server#readme"
+}
