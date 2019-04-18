@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/RobbMoskv/SpaceX-GraphQL-Server/issues"
   },
-  "homepage": "https://github.com/RobbMoskv/SpaceX-GraphQL-Server#readme"
+  "homepage": "https://github.com/RobbMoskv/SpaceX-GraphQL-Server#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
 }
