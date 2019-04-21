@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/RobbMoskv/SpaceX-GraphQL-Server#readme",
   "devDependencies": {
+    "jasmine": "^3.4.0",
     "nodemon": "^1.18.11"
   },
   "dependencies": {
