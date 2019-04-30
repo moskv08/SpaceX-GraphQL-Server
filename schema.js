@@ -1,6 +1,7 @@
-
 const LaunchType = require('./NodeTypes/Launch');
 const RocketType = require('./NodeTypes/Rocket');
+const MissionType = require('./NodeTypes/Mission');
+
 const axios = require('axios');
 const {
     GraphQLObjectType,
@@ -9,7 +10,6 @@ const {
     GraphQLString,
     GraphQLSchema,
 } = require('graphql');
-
 
 const spaceXApi = 'https://api.spacexdata.com/v3';
 
@@ -56,6 +56,25 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args) {
                 return axios
                     .get(`${spaceXApi}/rockets/${args.rocket_id}`)
+                    .then(res => res.data);
+            }
+        },
+        missions: {
+            type: new GraphQLList(MissionType),
+            resolve() {
+                return axios
+                    .get(`${spaceXApi}/missions`)
+                    .then(res => res.data);
+            }
+        },
+        mission: {
+            type: MissionType,
+            args: {
+                mission_id: { type: GraphQLString }
+            },
+            resolve(parent, args) {
+                return axios
+                    .get(`${spaceXApi}/missions/${args.mission_id}`)
                     .then(res => res.data);
             }
         }

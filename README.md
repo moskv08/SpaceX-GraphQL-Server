@@ -10,11 +10,12 @@ If you want to learn more about **graphQL** then just visit the official website
 
 The backend server application was implemented with **Node.js** and some helpers as follows:  
 
-- Express.js Framework 
+- [Express.js](https://expressjs.com/) Framework 
 - GraphQL Module
 - Express-GraphQL Module
 - Axios Module (for API requests)
 - Nodemon Module (Serve on save)
+- [Jasmine](https://jasmine.github.io/) Testing Framework
 
 ### How to use it?  
   
