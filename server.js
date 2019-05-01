@@ -5,9 +5,11 @@ const schema = require('./schema');
 const app = express();
 
 // Create the route handler
-app.use('/graphql', graphqlHTTP({
-    schema,
-    graphiql: true,
+app.use(
+    '/graphql', 
+    graphqlHTTP({
+        schema,
+        graphiql: true,
 }));
 
 const PORT = process.env.PORT || 5000;
