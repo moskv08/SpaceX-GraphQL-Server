@@ -1,5 +1,5 @@
 
-const { LaunchType, RocketType, MissionType } = require('./config');
+const { LaunchType, RocketType, MissionType } = require('../config');
 
 const axios = require('axios');
 const {
@@ -10,13 +10,14 @@ const {
     GraphQLSchema,
 } = require('graphql');
 
-const spaceXApi = 'https://api.spacexdata.com/v3';
+// Read the .env File
+const dotenv = require('dotenv');
+dotenv.config();
 
-// GraphQL Schema definition
-// https://medium.freecodecamp.org/how-to-set-up-a-graphql-server-using-node-js-express-mongodb-52421b73f474
+const spaceXApi = process.env.API_URL;
 
 // Root query to provide enpoints with (data) resolvers 
-const RootQuery = new GraphQLObjectType({   
+const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
         launches: {
