@@ -1,9 +1,7 @@
-const LaunchType = require('../models/Launch');
-const RocketType = require('../models/Rocket');
-const MissionType = require('../models/Mission');
-
+// config.js
+const dotenv = require('dotenv');
+dotenv.config();
 module.exports = {
-    LaunchType,
-    RocketType,
-    MissionType
+    endpoint: process.env.API_URL,
+    port: process.env.PORT
 };

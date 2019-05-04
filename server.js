@@ -1,10 +1,7 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./graphql/schema');
-
-// Read the .env File
-const dotenv = require('dotenv');
-dotenv.config();
+const { port } = require('./config/');
 
 const app = express();
 
@@ -16,5 +13,4 @@ app.use(
         graphiql: true,
     }));
 
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server is running on ${PORT}...`));
+app.listen(port, () => console.log(`Server is running on ${port}...`));

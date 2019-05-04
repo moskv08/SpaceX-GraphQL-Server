@@ -1,5 +1,6 @@
 
-const { LaunchType, RocketType, MissionType } = require('../config');
+const { LaunchType, RocketType, MissionType } = require('../models');
+const { endpoint } = require('../config');
 
 const axios = require('axios');
 const {
@@ -10,22 +11,16 @@ const {
     GraphQLSchema,
 } = require('graphql');
 
-// Read the .env File
-const dotenv = require('dotenv');
-dotenv.config();
-
-const spaceXApi = process.env.API_URL;
-
 // Root query to provide enpoints with (data) resolvers 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
         launches: {
             type: new GraphQLList(LaunchType),
-            resolve(parent, args) {
+            resolve() {
                 // Getting the acutal data
                 return axios
-                    .get(`${spaceXApi}/launches`)
+                    .get(`${endpoint}/launches`)
                     .then(res => res.data);
             }
         },
@@ -36,16 +31,16 @@ const RootQuery = new GraphQLObjectType({
             },
             resolve(parent, args) {
                 return axios
-                    .get(`${spaceXApi}/launches/${args.flight_number}`)
+                    .get(`${endpoint}/launches/${args.flight_number}`)
                     .then(res => res.data);
             }
         },
         rockets: {
             type: new GraphQLList(RocketType),
-            resolve(parent, args) {
+            resolve() {
                 // Getting the acutal data
                 return axios
-                    .get(`${spaceXApi}/rockets`)
+                    .get(`${endpoint}/rockets`)
                     .then(res => res.data);
             }
         },
@@ -56,7 +51,7 @@ const RootQuery = new GraphQLObjectType({
             },
             resolve(parent, args) {
                 return axios
-                    .get(`${spaceXApi}/rockets/${args.rocket_id}`)
+                    .get(`${endpoint}/rockets/${args.rocket_id}`)
                     .then(res => res.data);
             }
         },
@@ -64,7 +59,7 @@ const RootQuery = new GraphQLObjectType({
             type: new GraphQLList(MissionType),
             resolve() {
                 return axios
-                    .get(`${spaceXApi}/missions`)
+                    .get(`${endpoint}/missions`)
                     .then(res => res.data);
             }
         },
@@ -75,7 +70,7 @@ const RootQuery = new GraphQLObjectType({
             },
             resolve(parent, args) {
                 return axios
-                    .get(`${spaceXApi}/missions/${args.mission_id}`)
+                    .get(`${endpoint}/missions/${args.mission_id}`)
                     .then(res => res.data);
             }
         }
