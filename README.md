@@ -18,7 +18,7 @@ The backend server application was implemented with **Node.js** and some helpers
 - [Jasmine](https://jasmine.github.io/) Testing Framework
 - [Docker](https://github.com/docker) Engine
 
-### How to use it?  
+### How to run it?  
   
 Just clone the repository and
 ```
@@ -40,6 +40,36 @@ or with the _nodemon_ mode to keep track of environment changes.
 ```
 $ npm run server
 ```
+### How to query data?
+
+As there are of course more ways to query data the following examples  
+shall give you an overview how to differenciate between single object and list querries.
+
+```json
+# Get all flights
+{
+  launches {
+    flight_number
+    mission_name
+    launch_success
+    launch_year
+  }
+}
+```
+
+```json
+# Get a specific flight
+{
+  launch(flight_number: 1) {
+    flight_number
+    mission_name
+    launch_success
+    launch_year
+  }
+}
+```
+
+
 
 Finally open your browser and go to [http://localhost:5000/graphql](http://localhost:5000/graphql) to use the **GraphiQL** to query your data.
   
