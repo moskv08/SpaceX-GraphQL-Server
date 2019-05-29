@@ -16,6 +16,7 @@ The backend server application was implemented with **Node.js** and some helpers
 - Axios Module (for API requests)
 - Nodemon Module (Serve on save)
 - [Jasmine](https://jasmine.github.io/) Testing Framework
+- [Docker](https://github.com/docker) Engine
 
 ### How to use it?  
   
