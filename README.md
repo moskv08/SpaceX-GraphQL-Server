@@ -45,7 +45,7 @@ $ npm run server
 As there are of course more ways to query data the following examples  
 shall give you an overview how to differenciate between single object and list querries.
 
-```json
+```
 # Get all flights
 {
   launches {
@@ -57,7 +57,7 @@ shall give you an overview how to differenciate between single object and list q
 }
 ```
 
-```json
+```
 # Get a specific flight
 {
   launch(flight_number: 1) {
